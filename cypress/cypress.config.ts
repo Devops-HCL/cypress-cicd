@@ -9,11 +9,8 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
         if (browser.family === 'chromium' || browser.family === 'chrome') {
-          launchOptions.args.push('--disable-infobars')
           launchOptions.args.push('--disable-gpu')
-          launchOptions.args.push('--disable-dev-shm-usage')
           launchOptions.args.push('--no-sandbox')
-          launchOptions.args.push('--disable-web-security')
         }
         return launchOptions;
       })
@@ -24,7 +21,7 @@ export default defineConfig({
     "video": true,
     "viewportWidth": 1280,
     "viewportHeight": 630,
-    "screenshotsFolder": "/cypress/reports/screenshots/",
+    "screenshotsFolder": "cypress/reports/screenshots/",
     "videosFolder": "cypress/reports/videos/",
     "screenshotOnRunFailure": true,
     
