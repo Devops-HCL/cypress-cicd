@@ -7,7 +7,7 @@
     "pretestsmokechrome": "npm run clean:reports",
     "pretestregedge": "npm run clean:reports",
     "pretestsan": "npm run clean:reports",
-    "clean:reports": "[ ! -d ./reports/  ]",
+    "clean:reports": "[ ! -d ./reports/ && rm -rf cypress/reports ]",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --env grepTags=core --headed --browser chrome",
     "testsmokechrome": "cypress run --env grepTags=smoke,grepFilterSpecs=true --headed --browser chrome",
