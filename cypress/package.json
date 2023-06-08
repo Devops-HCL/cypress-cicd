@@ -1,7 +1,7 @@
 {
   "name": "aautomation",
   "version": "1.0.0",
-  "description": "GFX test automation using cypress automation tool",
+  "description": "automation using cypress automation tool",
   "scripts": {
     "pretest": "npm run clean:reports",
     "pretestsmokechrome": "npm run clean:reports",
