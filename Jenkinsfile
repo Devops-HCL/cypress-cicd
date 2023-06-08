@@ -4,16 +4,16 @@ pipeline {
         ansiColor('xterm')
    }
    stages {
-        stage('Build the image for Angular app') {
-           steps {
-               sh "docker build -f angular/Dockerfile -t angular-app ."
-           }
-        }
-        stage('app deploy in container') {
-           steps {
-               sh "docker run -d -p 4200:80 angular-app"
-           }
-        }
+//         stage('Build the image for Angular app') {
+//            steps {
+//                sh "docker build -f angular/Dockerfile -t angular-app ."
+//            }
+//         }
+//         stage('app deploy in container') {
+//            steps {
+//                sh "docker run -d -p 4200:80 angular-app"
+//            }
+//         }
         stage('Deploying') {
            steps {
                echo "Deploy the app"
@@ -44,10 +44,11 @@ pipeline {
                   publishHTML(target: [allowMissing: false,
                   alwaysLinkToLastBuild: false,
                   keepAll: true,
-                  reportDir: '/var/jenkins_home/workspace/cypress',
-                  reportFiles: 'report.html',
+                  reportDir: '/var/jenkins_home/workspace/cypress/reports',
+                  reportFiles: '**/*.html',
                   reportName: 'Reports',
-                  reportTitles: 'jenkins-reports$BUILD_NUMBER'
+                  reportTitles: 'jenkins-reports$BUILD_NUMBER',
+                  useWrapperFileDirectly: true,
                   ])
             }
         }     
