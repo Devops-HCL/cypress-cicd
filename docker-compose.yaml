@@ -1,7 +1,7 @@
 version: '3.6'
 services:
   e2e-chrome:
-    image: "testing"   ##Docker image name
+    image: "cypress-test"  
     environment:
         - CYPRESS_baseUrl=http://0.0.0.0:4200/
     command: ["testsmokechrome"] 
@@ -10,7 +10,7 @@ services:
       - ./cypress/cypress/reports/chrome/:/cypressdocker/cypress/reports
       
   e2e-edge:
-    image: "testing"  ##Docker image name
+    image: "cypress-test"  
     environment:
         - CYPRESS_baseUrl=http://0.0.0.0:4200/
     command: ["testregedge"] 
