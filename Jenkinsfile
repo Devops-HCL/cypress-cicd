@@ -3,27 +3,7 @@ pipeline {
    options{
         ansiColor('xterm')
    }
-   stages {
-//         stage('Build the image for Angular app') {
-//            steps {
-//                sh "docker build -f angular/Dockerfile -t angular-app ."
-//            }
-//         }
-//         stage('app deploy in container') {
-//            steps {
-//                sh "docker run -d -p 4200:80 angular-app"
-//            }
-//         }
-        stage('Deploying') {
-           steps {
-               echo "Deploy the app"
-           }
-        }
-        stage('Application status') {
-           steps {
-               echo "Running on http://0.0.0.0:4200/"
-           }
-        }      
+   stages {     
         stage('Build image') {
            steps {
                sh "docker build -t cypress-test ."
