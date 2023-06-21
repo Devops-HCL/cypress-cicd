@@ -18,7 +18,7 @@ export default defineConfig({
     support: 'cypress/support/e2e.js',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',  
     "watchForFileChanges": true,
-    "video": true,
+    "video": false,
     "viewportWidth": 1280,
     "viewportHeight": 630,
     "screenshotsFolder": "cypress/reports/screenshots/",
