@@ -21,7 +21,9 @@
     "concurrently": "^7.3.0",
     "cy-verify-downloads": "^0.1.13",
     "cypress": "^10.7.0",
+    "cypress-grep": "^3.0.3",
     "cypress-mochawesome-reporter": "^3.2.2",
+    "cypress-xpath": "^2.0.1",
     "faker": "^5.5.3",
     "fs": "^0.0.1-security",
     "typescript": "^4.7.4"
