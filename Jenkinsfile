@@ -24,7 +24,7 @@ pipeline {
                   publishHTML(target: [allowMissing: false,
                   alwaysLinkToLastBuild: false,
                   keepAll: true,
-                  reportDir: '/var/lib/jenkins/workspace/cypress_cicd/cypress/cypress/reports/',
+                  reportDir: '/var/lib/jenkins/workspace/cypress_ci/cypress/cypress/reports/',
                   reportFiles: '**/*.html',
                   reportName: 'Reports',
                   reportTitles: 'jenkins-reports$BUILD_NUMBER',
