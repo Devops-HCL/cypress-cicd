@@ -3,7 +3,7 @@ services:
   e2e-chrome:
     image: "cypress-test"  
     environment:
-        - CYPRESS_baseUrl=http://34.125.234.132:4200/
+        - CYPRESS_baseUrl=http://34.125.140.89:4200/
     command: ["testsmokechrome"] 
     network_mode: 'host'
     volumes:
@@ -12,7 +12,7 @@ services:
   e2e-edge:
     image: "cypress-test"  
     environment:
-        - CYPRESS_baseUrl=http://34.125.234.132:4200/
+        - CYPRESS_baseUrl=http://34.125.140.89:4200/
     command: ["testregedge"] 
     network_mode: 'host'
     volumes:
